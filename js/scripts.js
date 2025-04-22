@@ -1,33 +1,42 @@
-// Scripting
+// https://assets.codepen.io/16425/Spring-2025-Roster.json
 
-// Data source
-const url = "https://assets.codepen.io/16425/web-3-spring-2024-roster.json";
+const dataSource = 'https://assets.codepen.io/16425/Spring-2025-Roster.json';
 
-// Get data
-fetch(url)
-  .then( response  => response.json())
-  .then( data  => {
-    
-    // check-check: is the data good?
-    console.log(data);
-    console.log(data.Name);
-    console.log(data.Image);
+// Get the container
+const container = document.querySelector('.grid ul');
 
-    // get container for data
-    const roster = document.querySelector(".roster");
+// Fetch the data
+fetch(dataSource)
+  .then(res => res.json())
+  .then(students => {
+    console.log(students[3].name); // sanity check
 
-    // loop through data
-    data.forEach( student => {
-      
-      // template
+    students.forEach(student => {
       const template = `
-          <figure>
-            <figcaption> ${student.Name} </figcaption>
-            <img src=" ${student.Image} " alt=" ${student.Name} ">
-          </figure>
-       `;
+        <li style="
+          background-color: ${student.favoriteColor};
+          border: 4px dotted #000;
+          border-radius: 12px;
+          padding: 1rem;
+          text-align: left;
+          color: black;
+        ">
+          <img src="${student.imageUrl}" alt="${student.name}" style="max-width: 100%; border-radius: 20px;" />
+          <h2>${student.name}</h2>
+          <p><strong>Favorite Band:</strong> ${student.favoriteBand}</p>
+          <p><strong>Talent:</strong> ${student.talent}</p>
+          <em>${student.favoriteSong}</em>
+        </li>
+      `;
 
-      // insert EACH `student` record into container
-      roster.insertAdjacentHTML("afterbegin", template);
+      container.insertAdjacentHTML('beforeend', template);
     });
+  
+  
+  
+  
+  
+  
+  
   });
+

@@ -15,11 +15,18 @@ Get, Show, and Style a Class Roster via our API data
 Use API endpoint for the _Collection_ provided in class. 
 
 ## Citations
-List your sources here
+* [Codepen](https://codepen.io/search/pens?q=cards)
+* [Github](https://github.com/)
+* [Netlify](https://www.netlify.com/)
+* [Figma](https://www.figma.com/)
+* [W3School](https://www.w3schools.com/)
+* [Chat Gpt](https://chatgpt.com)
+* [Claude](https://claude.ai)
+* [Github repo](https://github.com/LinkedInLearning/css-layout-code-challenges-3155794/codespaces)
 
 [Font Share](https://www.fontshare.com/)
 
 ## Why Does This Exist? 
-Thre are many have a no-code CMS, and GUIs for designing the templates. AirTable (and many others) also have an API that is accessible as a _headless CMS_. 
+I created a class roster to practice working on API'S and to gain a better understanding of how JS can heavily influence a project without having to incorporate a ton on HTML. 
 
 [AirTable](https://airtable.com/)
